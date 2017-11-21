@@ -15,18 +15,21 @@
  */
 package com.example.android.miwok;
 
+import android.content.Context;
 import android.content.Intent;
 import android.os.Bundle;
 import android.support.v7.app.AppCompatActivity;
 import android.view.View;
 import android.view.View.OnClickListener;
 import android.widget.TextView;
+import android.widget.Toast;
 
 public class MainActivity extends AppCompatActivity {
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
+
 
         // Set the content of the activity to use the activity_main.xml layout file
         setContentView(R.layout.activity_main);
@@ -44,6 +47,7 @@ public class MainActivity extends AppCompatActivity {
 
                 // Start the new activity
                 startActivity(numbersIntent);
+                Toast.makeText(getApplicationContext(), "Number", Toast.LENGTH_SHORT).show();
             }
         });
 
@@ -56,10 +60,11 @@ public class MainActivity extends AppCompatActivity {
             @Override
             public void onClick(View view) {
                 // Create a new intent to open the {@link FamilyActivity}
-                Intent familyIntent = new Intent(MainActivity.this, FamilyActivity.class);
+                Intent familyIntent = new Intent(MainActivity.this, FamiilyActivity.class);
 
                 // Start the new activity
                 startActivity(familyIntent);
+                Toast.makeText(getApplicationContext(), "Family", Toast.LENGTH_SHORT).show();
             }
         });
 
@@ -72,10 +77,11 @@ public class MainActivity extends AppCompatActivity {
             @Override
             public void onClick(View view) {
                 // Create a new intent to open the {@link ColorsActivity}
-                Intent colorsIntent = new Intent(MainActivity.this, ColorsActivity.class);
+                Intent colorsIntent = new Intent(MainActivity.this, ColorActivity.class);
 
                 // Start the new activity
                 startActivity(colorsIntent);
+                Toast.makeText(getApplicationContext(), "Color", Toast.LENGTH_SHORT).show();
             }
         });
 
@@ -92,6 +98,7 @@ public class MainActivity extends AppCompatActivity {
 
                 // Start the new activity
                 startActivity(phrasesIntent);
+                Toast.makeText(getApplicationContext(), "Phrases", Toast.LENGTH_SHORT).show();
             }
         });
     }

@@ -29,6 +29,7 @@
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
+
         <activity
             android:name=".NumbersActivity"
             android:label="@string/category_numbers"
@@ -39,8 +40,8 @@
                 android:value=".MainActivity"/>
         </activity>
         <activity
-            android:name=".FamilyActivity"
-            android:label="@string/category_family"
+            android:name=".ColorActivity"
+            android:label="@string/category_colors"
             android:parentActivityName=".MainActivity">
             <!-- Parent activity meta-data to support 4.0 and lower -->
             <meta-data
@@ -48,8 +49,8 @@
                 android:value=".MainActivity"/>
         </activity>
         <activity
-            android:name=".ColorsActivity"
-            android:label="@string/category_colors"
+            android:name=".FamiilyActivity"
+            android:label="@string/category_family"
             android:parentActivityName=".MainActivity">
             <!-- Parent activity meta-data to support 4.0 and lower -->
             <meta-data
@@ -65,6 +66,7 @@
                 android:name="android.support.PARENT_ACTIVITY"
                 android:value=".MainActivity"/>
         </activity>
+
     </application>
 
 </manifest>
