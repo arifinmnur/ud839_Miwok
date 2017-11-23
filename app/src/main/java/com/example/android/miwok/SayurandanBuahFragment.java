@@ -1,7 +1,9 @@
 package com.example.android.miwok;
 
 
+import android.content.Context;
 import android.os.Bundle;
+import android.support.design.widget.CoordinatorLayout;
 import android.support.v4.app.Fragment;
 import android.support.v7.widget.DefaultItemAnimator;
 import android.support.v7.widget.LinearLayoutManager;
@@ -9,6 +11,7 @@ import android.support.v7.widget.RecyclerView;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.FrameLayout;
 import android.widget.TextView;
 import android.widget.Toast;
 
@@ -18,7 +21,7 @@ import java.util.ArrayList;
  * A simple {@link Fragment} subclass.
  */
 public class SayurandanBuahFragment extends Fragment {
-
+    CoordinatorLayout.Behavior behavior;
     private ArrayList<SayurandanBuah> sayurandanBuahs = new ArrayList<>();
     private RecyclerView recyclerView;
     private SayurandanBuahAdapter mAdapter;
@@ -38,19 +41,19 @@ public class SayurandanBuahFragment extends Fragment {
         recyclerView.setHasFixedSize(true);
         RecyclerView.LayoutManager mLayoutManager = new LinearLayoutManager(getActivity().getApplicationContext());
 
-        sayurandanBuahs=new ArrayList<>();
-        sayurandanBuahs.add(new SayurandanBuah("Tomat","Sayuran",R.drawable.color_black));
-        sayurandanBuahs.add(new SayurandanBuah("Pisang","Sayuran",R.drawable.color_black));
-        sayurandanBuahs.add(new SayurandanBuah("Mangga","Sayuran",R.drawable.color_black));
-        sayurandanBuahs.add(new SayurandanBuah("Sayur","Sayuran",R.drawable.color_black));
-        sayurandanBuahs.add(new SayurandanBuah("Tomat2","Sayuran",R.drawable.color_black));
-        sayurandanBuahs.add(new SayurandanBuah("Pisang2","Sayuran",R.drawable.color_black));
-        sayurandanBuahs.add(new SayurandanBuah("Mangga2","Sayuran",R.drawable.color_black));
-        sayurandanBuahs.add(new SayurandanBuah("Sayur2","Sayuran",R.drawable.color_black));
-        sayurandanBuahs.add(new SayurandanBuah("Tomat3","Sayuran",R.drawable.color_black));
-        sayurandanBuahs.add(new SayurandanBuah("Pisang3","Sayuran",R.drawable.color_black));
-        sayurandanBuahs.add(new SayurandanBuah("Mangga3","Sayuran",R.drawable.color_black));
-        sayurandanBuahs.add(new SayurandanBuah("Sayur3","Sayuran",R.drawable.color_black));
+        sayurandanBuahs = new ArrayList<>();
+        sayurandanBuahs.add(new SayurandanBuah("Tomat", "Sayuran", R.drawable.color_black));
+        sayurandanBuahs.add(new SayurandanBuah("Pisang", "Sayuran", R.drawable.color_black));
+        sayurandanBuahs.add(new SayurandanBuah("Mangga", "Sayuran", R.drawable.color_black));
+        sayurandanBuahs.add(new SayurandanBuah("Sayur", "Sayuran", R.drawable.color_black));
+        sayurandanBuahs.add(new SayurandanBuah("Tomat2", "Sayuran", R.drawable.color_black));
+        sayurandanBuahs.add(new SayurandanBuah("Pisang2", "Sayuran", R.drawable.color_black));
+        sayurandanBuahs.add(new SayurandanBuah("Mangga2", "Sayuran", R.drawable.color_black));
+        sayurandanBuahs.add(new SayurandanBuah("Sayur2", "Sayuran", R.drawable.color_black));
+        sayurandanBuahs.add(new SayurandanBuah("Tomat3", "Sayuran", R.drawable.color_black));
+        sayurandanBuahs.add(new SayurandanBuah("Pisang3", "Sayuran", R.drawable.color_black));
+        sayurandanBuahs.add(new SayurandanBuah("Mangga3", "Sayuran", R.drawable.color_black));
+        sayurandanBuahs.add(new SayurandanBuah("Sayur3", "Sayuran", R.drawable.color_black));
 
         mAdapter = new SayurandanBuahAdapter(sayurandanBuahs);
         recyclerView.setLayoutManager(mLayoutManager);

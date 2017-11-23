@@ -17,7 +17,8 @@
     android:clickable="true"
     android:focusable="true"
     android:orientation="vertical"
-    android:background="?android:attr/selectableItemBackground"
+    android:foreground="?android:attr/selectableItemBackground"
+    android:background="?android:selectableItemBackground"
     android:descendantFocusability="blocksDescendants">
 
     <ImageView
@@ -33,7 +34,6 @@
         android:layout_alignParentRight="true"
         android:layout_alignParentTop="true"
         android:layout_toRightOf="@+id/imagesRC"
-        android:background="@color/category_numbers"
         android:paddingLeft="16dp">
 
         <TextView
@@ -43,7 +43,7 @@
             android:layout_weight="1"
             android:gravity="bottom"
             android:textAppearance="?android:textAppearanceLarge"
-            android:textColor="@android:color/white"
+            android:textColor="@android:color/black"
             android:textStyle="bold"
             tools:text="lutti" />
 
@@ -55,7 +55,7 @@
             android:layout_weight="1"
             android:gravity="top"
             android:textAppearance="?android:textAppearanceMedium"
-            android:textColor="@android:color/white"
+            android:textColor="@android:color/black"
             tools:text="one" />
     </RelativeLayout>
 
