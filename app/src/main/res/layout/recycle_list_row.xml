@@ -11,25 +11,28 @@
     --><!-- Layout for a single list item -->
 <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools"
-    android:id="@+id/list_item"
+    android:id="@+id/Recycle_list"
     android:layout_width="match_parent"
     android:layout_height="@dimen/list_item_height"
-    android:background="@color/tan_background"
+    android:clickable="true"
+    android:focusable="true"
+    android:orientation="vertical"
+    android:background="?android:attr/selectableItemBackground"
     android:descendantFocusability="blocksDescendants">
 
     <ImageView
-        android:id="@+id/images1"
+        android:id="@+id/imagesRC"
         android:layout_width="@dimen/list_item_height"
         android:layout_height="@dimen/list_item_height" />
 
     <RelativeLayout
-        android:id="@+id/text_container"
+        android:id="@+id/text_containerRC"
         android:layout_width="match_parent"
         android:layout_height="@dimen/list_item_height"
         android:layout_alignParentBottom="true"
         android:layout_alignParentRight="true"
         android:layout_alignParentTop="true"
-        android:layout_toRightOf="@+id/images1"
+        android:layout_toRightOf="@+id/imagesRC"
         android:background="@color/category_numbers"
         android:paddingLeft="16dp">
 
@@ -39,7 +42,7 @@
             android:layout_height="44dp"
             android:layout_weight="1"
             android:gravity="bottom"
-            android:textAppearance="?android:textAppearanceMedium"
+            android:textAppearance="?android:textAppearanceLarge"
             android:textColor="@android:color/white"
             android:textStyle="bold"
             tools:text="lutti" />
@@ -57,12 +60,5 @@
     </RelativeLayout>
 
 
-    <ImageView
-        android:layout_width="24dp"
-        android:layout_height="24dp"
-        android:layout_alignParentRight="true"
-        android:layout_centerVertical="true"
-        android:layout_marginRight="16dp"
-        android:src="@drawable/ic_play_arrow_black_24dp" />
 
 </RelativeLayout>

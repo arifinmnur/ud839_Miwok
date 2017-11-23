@@ -45,16 +45,15 @@ public class SimpleFragmentAdapter extends FragmentPagerAdapter {
     @Override
     public Fragment getItem(int position) {
 
-        if (position == 0) {
-            return new NumbersFragment();
-        } else if (position == 1){
-            return new ColorFragment();
-        }else if (position == 2){
-            return new FamiilyFragment();
-        } else {
-            return new PhrasesFragment();
+
+        switch (position) {
+            case 0:return new NumbersFragment();
+            case 1:return new ColorFragment();
+            case 2:return new SayurandanBuahFragment();
+            case 3:return new PhrasesFragment();
         }
         //return PageFragment.newInstance(position + 1);
+        return null;
     }
 
     @Override

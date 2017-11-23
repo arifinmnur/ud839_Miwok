@@ -22,5 +22,4 @@
     android:descendantFocusability="blocksDescendants"
     android:drawSelectorOnTop="true"
     android:numColumns="2"
-    android:orientation="vertical"
-    tools:context="com.example.android.miwok.NumbersActivity" />
+    android:orientation="vertical"/>

@@ -47,10 +47,10 @@ public class WordAdapter extends ArrayAdapter<Word> {
 
         Word currentAndroidFlavor = getItem(position);
 
-        TextView defaultTranslation = (TextView) listItemView.findViewById(R.id.default_textview_id);
+        TextView defaultTranslation = (TextView) listItemView.findViewById(R.id.deskripsiBuah_textview_id);
         defaultTranslation.setText(currentAndroidFlavor.getDefaultTranslation());
 
-        TextView miworkTranslation = (TextView) listItemView.findViewById(R.id.miwork_textview_id);
+        TextView miworkTranslation = (TextView) listItemView.findViewById(R.id.namabuah_textview_id);
         miworkTranslation.setText(currentAndroidFlavor.getMiwokTranslation());
 
         ImageView imageview = (ImageView) listItemView.findViewById(R.id.images1);
